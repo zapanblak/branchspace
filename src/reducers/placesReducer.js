@@ -1,7 +1,7 @@
-import { RENDER_LIST } from "../actions/types";
+import { RENDER_LIST, ADD_TO_LIST } from "../actions/types";
 
 const initialState = {
-  places: {}
+  places: []
 };
 
 export default function(state = initialState, action) {
@@ -9,6 +9,12 @@ export default function(state = initialState, action) {
     case RENDER_LIST:
       return {
         ...state
+      };
+
+    case ADD_TO_LIST:
+      return {
+        ...state,
+        places: [...state.places, action.payload]
       };
     default:
       return state;
