@@ -8,10 +8,9 @@ export const selectPlace = place => {
   };
 };
 
-export const renderList = list => {
+export const renderList = () => {
   return {
-    type: RENDER_LIST,
-    payload: list
+    type: RENDER_LIST
   };
 };
 

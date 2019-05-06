@@ -8,7 +8,8 @@ export default function(state = initialState, action) {
   switch (action.type) {
     case RENDER_LIST:
       return {
-        ...state
+        ...state,
+        places: state.places
       };
 
     case ADD_TO_LIST:
